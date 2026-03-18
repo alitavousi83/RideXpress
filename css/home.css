@@ -1,0 +1,127 @@
+body{
+    background-color: brown;
+}
+header{
+    background-color: aquamarine;
+    text-align: center;
+   /* position: fixed;
+   display: block; */
+}
+
+        .container{
+
+            background-color: rgb(0, 123, 255);
+            display: grid;
+            grid-template-areas: 
+            "top top"
+            "news news"
+            "shortcut1 shortcut2"
+            "help help"
+            "article1 article2"
+            "pics pics"
+            "agree agree"
+            "bottom bottom";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2fr 2fr 4fr 1fr 4fr 4fr 6fr 2fr ;
+            
+        }
+
+        .container div{
+            padding: 10px;
+        }
+        
+        .container div.top{
+            grid-area: top;
+            text-align: center;
+            background-color: #d0e6fd;
+            border-bottom-left-radius: 25px ;
+            border-bottom-right-radius: 25px ;
+           
+            
+        }
+
+        .container div.news{
+            grid-area: news;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;
+        
+        }
+
+        .container div.shortcut1{
+            grid-area: shortcut1;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+        .container div.shortcut2{
+            grid-area: shortcut2;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+        .container div.help{
+            grid-area: help;
+            text-align: center;
+            background-color: #380371;
+            color: aliceblue;
+            border-radius: 10px;
+            margin: 8px;
+        }
+
+        .container div.article1{
+            grid-area: article1;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+
+        .container div.article2{
+            grid-area: article2;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+
+        .container div.pics{
+            grid-area: pics;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+        .container div.agree{
+            grid-area: agree;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+        .container div.bottom{
+            grid-area: bottom;
+            text-align: center;
+            background-color: #fe462e;
+            border-radius: 10px;
+             margin: 8px;  
+        }
+
+
+
+
+
+footer{
+    background-color: rgb(1, 6, 6);
+    text-align: center;
+    color: antiquewhite;
+}
