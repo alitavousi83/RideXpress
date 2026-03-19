@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(8, 83, 163);
+    background-color: #5465FF;
 
  
     
@@ -15,7 +15,7 @@ header{
 
         .container{
 
-            background-color: rgb(8, 83, 163);
+            background-color:  #5465FF;
             display: grid;
             grid-template-areas: 
             "top top"
@@ -37,15 +37,141 @@ header{
         
         .container div.top{
             grid-area: top;
+            display: grid;
+            grid-template-areas: 
+            "logo name name ali"
+            "home-page gallery-page aboutUs-page contactUs-page"
+            ;
             text-align: center;
             background-color: #d0e6fd;
             border-bottom-left-radius: 25px ;
             border-bottom-right-radius: 25px ;
             border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-           
-            
+            border-top-left-radius: 10px;    
         }
+
+        .top div.logo{
+             grid-area: logo;
+            text-align: center;
+            /* background-color: #fe462e; */
+            border-radius: 10px;
+             margin: 8px;           
+        }
+
+        .logo img{
+            width: 11rem;
+            position: absolute;
+            top: 2%; 
+            left: -4%;           
+        }
+
+        .top div.name{
+             grid-area: name;
+            text-align: center;
+            /* background-color: hsl(163, 85%, 15%); */
+            border-radius: 10px;
+             margin: 8px;        
+             color: #001429;
+              font-size:2.3rem;
+              position: absolute;
+              top: 1.5%;
+              right:25%;
+              
+              
+        }
+
+        .top div.ali{
+             grid-area: ali;
+            text-align: center;
+            /* background-color: hsl(163, 85%, 15%); */
+            border-radius: 10px;
+             margin: 8px;        
+             color: #d0e6fd; 
+        }
+
+        .ali img{
+            width: 11rem;
+            position: absolute;
+            top: 2%; 
+            right: -6%;           
+        }
+
+
+        .top div.home-page{
+             grid-area: home-page;
+            text-align: center;
+            background-color: #162660;
+            border-style: inset;
+            border-radius: 10px;
+             margin:10px;
+            color: #d0e6fd; 
+           
+        }
+        .home-page:hover{
+           border-bottom-color: #5465FF;
+           border-left-color: #49e8fd;
+            border-right-color: #5465FF;
+            border-top-color: #49e8fd;
+            color: #49e8fd; 
+        }
+        #home-link{
+           color: #d0e6fd;
+        }
+        #home-link:hover{
+           color: #076ad5;
+        }
+
+
+        .top div.gallery-page{
+             grid-area: gallery-page;
+            text-align: center;
+            background-color: #162660;
+            border-radius: 10px;
+             margin: 10px;        
+             color: #d0e6fd; 
+             border-style: inset;
+        }
+        .gallery-page:hover{
+           border-bottom-color: #5465FF;
+           border-left-color: #49e8fd;
+            border-right-color: #5465FF;
+            border-top-color: #49e8fd; 
+        }
+
+        .top div.aboutUs-page{
+             grid-area: aboutUs-page;
+            text-align: center;
+            background-color: #162660;
+            border-radius: 10px;
+             margin: 10px;        
+             color: #d0e6fd; 
+             border-style: inset;
+        }
+        .aboutUs-page:hover{
+           border-bottom-color: #5465FF;
+           border-left-color: #49e8fd;
+            border-right-color: #5465FF;
+            border-top-color: #49e8fd; 
+        }
+
+        .top div.contactUs-page{
+             grid-area: contactUs-page;
+            text-align: center;
+            background-color: #162660;
+            border-radius: 10px;
+             margin: 10px;        
+             color: #d0e6fd; 
+             border-style: inset;
+        }
+        .contactUs-page:hover{
+           border-bottom-color: #5465FF;
+           border-left-color: #49e8fd;
+            border-right-color: #5465FF;
+            border-top-color: #49e8fd; 
+        }
+
+
+
 
         .container div.news{
             grid-area: news;
@@ -55,6 +181,8 @@ header{
              margin: 8px;
         
         }
+
+        
 
         .container div.shortcut1{
             grid-area: shortcut1;
