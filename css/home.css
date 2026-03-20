@@ -8,8 +8,9 @@ header{
     /* background-color: rgb(40, 235, 170); */
     text-align: center;
     border: #1e0638 3.5px solid;
-    background: linear-gradient(to left ,  red , yellow , rgb(37, 255, 37) ,yellow, red);
+    background: linear-gradient(to left ,  rgb(0, 238, 255) , rgb(0, 255, 98) , rgb(255, 255, 255) ,rgb(0, 255, 98), rgb(0, 238, 255));
     border-radius: 10px;
+    color: #162660;
 
 }
 
@@ -27,7 +28,7 @@ header{
             "agree agree"
             "bottom bottom";
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 2fr 2fr 4fr 1fr 4fr 4fr 6fr 2fr ;
+            grid-template-rows: 1fr 2fr 4fr 1fr 4fr 4fr 6fr 1fr ;
             
         }
 
@@ -38,10 +39,6 @@ header{
         .container div.top{
             grid-area: top;
             display: grid;
-            grid-template-areas: 
-            "logo name name ali"
-            "home-page gallery-page aboutUs-page contactUs-page"
-            ;
             text-align: center;
             background-color: #d0e6fd;
             border-bottom-left-radius: 25px ;
@@ -51,124 +48,30 @@ header{
         }
 
         .top div.logo{
-             grid-area: logo;
             text-align: center;
-            /* background-color: #fe462e; */
-            border-radius: 10px;
-             margin: 8px;           
+      
         }
 
         .logo img{
-            width: 11rem;
+            width: 30rem;
             position: absolute;
-            top: 2%; 
-            left: -4%;           
+            top: -15vw; 
+            right: -3vw;           
         }
 
-        .top div.name{
-             grid-area: name;
-            text-align: center;
-            /* background-color: hsl(163, 85%, 15%); */
-            border-radius: 10px;
-             margin: 8px;        
-             color: #001429;
-              font-size:2.3rem;
-              position: absolute;
-              top: 1.5%;
-              right:25%;
-              
-              
-        }
 
         .top div.ali{
-             grid-area: ali;
             text-align: center;
-            /* background-color: hsl(163, 85%, 15%); */
-            border-radius: 10px;
-             margin: 8px;        
-             color: #d0e6fd; 
         }
 
         .ali img{
             width: 11rem;
             position: absolute;
-            top: 2%; 
-            right: -6%;           
+            top: 1%; 
+            right: -4%;           
         }
 
 
-        .top div.home-page{
-             grid-area: home-page;
-            text-align: center;
-            background-color: #162660;
-            border-style: inset;
-            border-radius: 10px;
-             margin:10px;
-            color: #d0e6fd; 
-           
-        }
-        .home-page:hover{
-           border-bottom-color: #5465FF;
-           border-left-color: #49e8fd;
-            border-right-color: #5465FF;
-            border-top-color: #49e8fd;
-            color: #49e8fd; 
-        }
-        #home-link{
-           color: #d0e6fd;
-        }
-        #home-link:hover{
-           color: #076ad5;
-        }
-
-
-        .top div.gallery-page{
-             grid-area: gallery-page;
-            text-align: center;
-            background-color: #162660;
-            border-radius: 10px;
-             margin: 10px;        
-             color: #d0e6fd; 
-             border-style: inset;
-        }
-        .gallery-page:hover{
-           border-bottom-color: #5465FF;
-           border-left-color: #49e8fd;
-            border-right-color: #5465FF;
-            border-top-color: #49e8fd; 
-        }
-
-        .top div.aboutUs-page{
-             grid-area: aboutUs-page;
-            text-align: center;
-            background-color: #162660;
-            border-radius: 10px;
-             margin: 10px;        
-             color: #d0e6fd; 
-             border-style: inset;
-        }
-        .aboutUs-page:hover{
-           border-bottom-color: #5465FF;
-           border-left-color: #49e8fd;
-            border-right-color: #5465FF;
-            border-top-color: #49e8fd; 
-        }
-
-        .top div.contactUs-page{
-             grid-area: contactUs-page;
-            text-align: center;
-            background-color: #162660;
-            border-radius: 10px;
-             margin: 10px;        
-             color: #d0e6fd; 
-             border-style: inset;
-        }
-        .contactUs-page:hover{
-           border-bottom-color: #5465FF;
-           border-left-color: #49e8fd;
-            border-right-color: #5465FF;
-            border-top-color: #49e8fd; 
-        }
 
 
 
@@ -179,7 +82,16 @@ header{
             background-color: #fe462e;
             border-radius: 10px;
              margin: 8px;
+             color: #49e8fd;
         
+        }
+
+        .news img{
+            /* position: absolute; */
+            width: 85vw;
+            height: 15vh;
+            right: 10rem;
+            border-radius: 50px;
         }
 
         
@@ -252,7 +164,23 @@ header{
         }
 
 
-
+        .container div.bottom{
+            grid-area: bottom;
+            display: grid;
+            text-align: center;
+            background-color: #d0e6fd;
+            /* background-color: #1e0638; */
+            border-top-left-radius: 25px ;
+            border-top-right-radius: 25px ;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;   
+            position: fixed ;
+            
+            justify-self: center;
+            width: 90vw;
+            height: 5vh;
+            bottom: 3vh;
+        }
 
 
 footer{
