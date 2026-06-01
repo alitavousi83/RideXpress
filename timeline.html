@@ -11,7 +11,9 @@
 <body>
 
     <div class="promo-banner">
-        ...***...***...<b>75% off for Drivers<sup class="promo-badge">*new*</sup></b>...***...***...
+        <strong>75% commission discount for new drivers</strong>
+        <sup class="promo-badge">*limited time*</sup>
+        — Join RideXpress today and start earning!
     </div>
 
     <nav class="navbar navbar-expand-lg site-navbar sticky-top">
@@ -46,14 +48,62 @@
     </nav>
 
     <main class="page-grid page-grid--single">
-        <section class="help card-section">
-            <h2><i class="bi bi-clock-fill"></i> Timeline</h2>
-            <p>View taxi movement times and live ride schedules.</p>
+        <section class="help card-section timeline-page">
+            <h2><i class="bi bi-clock-fill"></i> Live Taxi Timeline</h2>
+            <p class="page-intro">Track active rides and estimated arrival times across the city.</p>
+
+            <ul class="timeline-list">
+                <li class="timeline-item timeline-item--active">
+                    <span class="timeline-time">14:32</span>
+                    <div class="timeline-body">
+                        <strong>Taxi #RX-2041</strong>
+                        <span>En route to Valiasr Sq — ETA 3 min</span>
+                    </div>
+                    <span class="timeline-badge">Moving</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-time">14:28</span>
+                    <div class="timeline-body">
+                        <strong>Taxi #RX-1187</strong>
+                        <span>Passenger picked up — heading to Airport</span>
+                    </div>
+                    <span class="timeline-badge timeline-badge--busy">On trip</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-time">14:25</span>
+                    <div class="timeline-body">
+                        <strong>Taxi #RX-3309</strong>
+                        <span>Waiting at Tajrish Station — available now</span>
+                    </div>
+                    <span class="timeline-badge timeline-badge--free">Available</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-time">14:19</span>
+                    <div class="timeline-body">
+                        <strong>Taxi #RX-0922</strong>
+                        <span>Completed ride — returning to downtown</span>
+                    </div>
+                    <span class="timeline-badge">Returning</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-time">14:10</span>
+                    <div class="timeline-body">
+                        <strong>Taxi #RX-5510</strong>
+                        <span>Scheduled pickup at 14:45 — Azadi Tower</span>
+                    </div>
+                    <span class="timeline-badge timeline-badge--scheduled">Scheduled</span>
+                </li>
+            </ul>
+
+            <p class="card-note timeline-note">
+                <i class="bi bi-arrow-repeat"></i> Times refresh automatically during peak hours.
+            </p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>This site is made by Ali Tavousi</p>
+        <p>RideXpress &copy; 2026 — Fast taxi service you can trust</p>
+        <p class="footer-credit">Website by Ali Tavousi</p>
     </footer>
 
     <nav class="bottom-nav" aria-label="Quick navigation">

@@ -1,15 +1,68 @@
-/* ===== Design tokens ===== */
+/* ===== Design tokens — RideXpress color system =====
+   Psychology mapping:
+   • Navy blue  → trust, safety, reliability (transport brands)
+   • Taxi gold  → energy, visibility, action (universal taxi signal)
+   • Teal       → movement, freshness, modern mobility
+   • Soft gray  → calm clarity, reduced visual fatigue
+   • Deep navy  → support & authority (help sections)
+   • Amber      → alert without panic (traffic notices)
+   • Green      → go / available / success
+*/
 :root {
-    --color-primary: #5465ff;
-    --color-accent: #fe462e;
-    --color-accent-text: #49e8fd;
-    --color-dark: #1e0638;
-    --color-purple: #380371;
-    --color-light: #d0e6fd;
-    --color-footer: #010606;
+    /* Brand core */
+    --color-brand: #0b3d6e;
+    --color-brand-light: #1a5a96;
+    --color-brand-dark: #072848;
+
+    /* Taxi gold — energy & CTA warmth */
+    --color-gold: #f5b800;
+    --color-gold-light: #ffd54f;
+    --color-gold-dark: #c89400;
+
+    /* Mobility teal — secondary accent */
+    --color-teal: #0d9488;
+    --color-teal-light: #2dd4bf;
+
+    /* Surfaces & background */
+    --color-bg: #eef2f6;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f8fafc;
+    --color-surface-elevated: #ffffff;
+
+    /* Semantic sections */
+    --color-trust: #0f2744;
+    --color-trust-text: #e8f0fa;
+    --color-alert-bg: #fef3c7;
+    --color-alert-text: #92400e;
+    --color-alert-border: #f59e0b;
+
+    /* Text */
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --color-text-on-dark: #f1f5f9;
+    --color-text-on-gold: #1a1200;
+
+    /* Status */
+    --color-success: #059669;
+    --color-success-light: #d1fae5;
+
+    /* Legacy aliases (used across components) */
+    --color-primary: var(--color-brand);
+    --color-accent: var(--color-surface);
+    --color-accent-text: var(--color-text);
+    --color-dark: var(--color-brand-dark);
+    --color-purple: var(--color-trust);
+    --color-light: var(--color-surface-alt);
+    --color-footer: #0a1628;
+
+    /* Effects */
     --radius-sm: 10px;
     --radius-lg: 25px;
-    --shadow-card: 0 4px 16px rgba(30, 6, 56, 0.15);
+    --shadow-card: 0 4px 20px rgba(11, 61, 110, 0.08);
+    --shadow-nav: 0 -4px 24px rgba(10, 22, 40, 0.12);
+    --border-subtle: 1px solid rgba(11, 61, 110, 0.12);
+    --border-strong: 2px solid var(--color-brand-dark);
+
     --bottom-nav-height: 4.5rem;
     --navbar-height: 3.75rem;
 }
@@ -27,10 +80,10 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     line-height: 1.5;
-    color: var(--color-dark);
+    color: var(--color-text);
     padding-bottom: calc(var(--bottom-nav-height) + 1rem);
 }
 
@@ -49,43 +102,44 @@ p {
     margin: 0;
 }
 
-/* ===== Promo banner ===== */
+/* ===== Promo banner — gold = urgency + optimism (driver promo) ===== */
 .promo-banner {
     text-align: center;
     padding: 0.55rem 0.75rem;
-    border: var(--color-dark) 3px solid;
+    border: var(--border-strong);
     background: linear-gradient(
-        to left,
-        rgb(0, 238, 255),
-        rgb(0, 255, 98),
-        rgb(255, 255, 255),
-        rgb(0, 255, 98),
-        rgb(0, 238, 255)
+        135deg,
+        var(--color-gold-light) 0%,
+        var(--color-gold) 45%,
+        var(--color-gold-light) 100%
     );
     border-radius: var(--radius-sm);
-    color: #162660;
+    color: var(--color-text-on-gold);
     font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+    font-weight: 600;
 }
 
 .promo-badge {
     font-size: 0.7rem;
-    color: rgb(158, 9, 9);
+    color: var(--color-brand-dark);
+    font-weight: 800;
 }
 
-/* ===== Bootstrap navbar overrides ===== */
+/* ===== Bootstrap navbar — white surface + navy = trust & clarity ===== */
 .site-navbar {
-    background-color: var(--color-light);
-    border-bottom: 3px solid var(--color-dark);
+    background-color: var(--color-surface);
+    border-bottom: var(--border-strong);
     min-height: var(--navbar-height);
+    box-shadow: 0 2px 12px rgba(11, 61, 110, 0.06);
 }
 
 .site-navbar .navbar-brand {
-    color: var(--color-dark);
+    color: var(--color-brand);
     font-weight: 700;
 }
 
 .site-navbar .nav-link {
-    color: var(--color-dark);
+    color: var(--color-text);
     font-weight: 600;
     border-radius: 8px;
     padding: 0.45rem 0.85rem !important;
@@ -94,22 +148,22 @@ p {
 
 .site-navbar .nav-link:hover,
 .site-navbar .nav-link:focus {
-    background-color: rgba(84, 101, 255, 0.15);
-    color: var(--color-purple);
+    background-color: rgba(245, 184, 0, 0.18);
+    color: var(--color-brand-dark);
 }
 
 .site-navbar .nav-link.active {
-    background-color: var(--color-primary);
-    color: #fff;
+    background-color: var(--color-brand);
+    color: var(--color-text-on-dark);
 }
 
 .site-navbar .navbar-toggler {
-    border-color: var(--color-dark);
+    border-color: var(--color-brand);
     padding: 0.35rem 0.55rem;
 }
 
 .site-navbar .navbar-toggler:focus {
-    box-shadow: 0 0 0 0.2rem rgba(84, 101, 255, 0.35);
+    box-shadow: 0 0 0 0.2rem rgba(11, 61, 110, 0.25);
 }
 
 .nav-logo {
@@ -125,9 +179,9 @@ p {
     .site-navbar .navbar-collapse {
         margin-top: 0.75rem;
         padding: 0.75rem;
-        background: rgba(255, 255, 255, 0.65);
+        background: var(--color-surface-alt);
         border-radius: var(--radius-sm);
-        border: 2px solid var(--color-dark);
+        border: var(--border-strong);
     }
 
     .site-navbar .nav-link {
@@ -189,12 +243,63 @@ p {
     grid-area: content;
 }
 
+.page-grid--about {
+    grid-template-areas:
+        "help"
+        "article1"
+        "article2"
+        "pics";
+}
+
+.page-grid--contact {
+    grid-template-areas:
+        "help"
+        "article1";
+}
+
+.page-grid--gallery {
+    grid-template-areas:
+        "news"
+        "pics"
+        "article1"
+        "article2"
+        "shortcut1";
+}
+
+@media (min-width: 576px) {
+    .page-grid--about {
+        grid-template-areas:
+            "help help"
+            "article1 article2"
+            "pics pics";
+    }
+
+    .page-grid--contact {
+        grid-template-areas:
+            "help help"
+            "article1 article1";
+    }
+
+    .page-grid--gallery {
+        grid-template-areas:
+            "news news"
+            "pics article1"
+            "article2 shortcut1";
+    }
+}
+
+.page-intro {
+    margin-bottom: 0.75rem;
+    opacity: 0.92;
+}
+
 /* ===== Shared card styles ===== */
 .card-section {
     padding: clamp(0.85rem, 2vw, 1.25rem);
     border-radius: var(--radius-sm);
     margin: 0;
     box-shadow: var(--shadow-card);
+    border: var(--border-subtle);
 }
 
 .section-label {
@@ -206,13 +311,15 @@ p {
     margin-bottom: 0.35rem;
 }
 
-/* ===== Top hero ===== */
+/* ===== Top hero — clean white = openness & welcome ===== */
 .top {
     grid-area: top;
-    background-color: var(--color-light);
+    background-color: var(--color-surface);
     border-radius: var(--radius-sm) var(--radius-sm) var(--radius-lg) var(--radius-lg);
     padding: clamp(1rem, 3vw, 2rem);
     overflow: hidden;
+    border: var(--border-subtle);
+    box-shadow: var(--shadow-card);
 }
 
 .top-inner {
@@ -234,6 +341,43 @@ p {
     margin: 0 auto;
 }
 
+.hero-text {
+    text-align: center;
+    max-width: 28rem;
+}
+
+.hero-text h1 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    color: var(--color-brand-dark);
+}
+
+.hero-lead {
+    font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+    margin-bottom: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    font-weight: 600;
+    color: var(--color-teal);
+}
+
+.hero-stats span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.hero-stats i {
+    color: var(--color-gold-dark);
+}
+
 @media (min-width: 768px) {
     .top-inner {
         flex-direction: row;
@@ -247,11 +391,65 @@ p {
 }
 
 /* ===== Section colors ===== */
+
+/* Amber alert — attention without anxiety (traffic / service news) */
 .news {
     grid-area: news;
     text-align: center;
-    background-color: var(--color-accent);
-    color: var(--color-accent-text);
+    background-color: var(--color-alert-bg);
+    color: var(--color-alert-text);
+    border-color: var(--color-alert-border);
+}
+
+.news .section-label {
+    color: var(--color-alert-text);
+}
+
+/* White cards + navy text — scannable, trustworthy content blocks */
+.shortcut1,
+.shortcut2,
+.article1,
+.article2,
+.pics,
+.agree {
+    text-align: center;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.shortcut1 .card-icon,
+.shortcut2 .card-icon {
+    color: var(--color-gold-dark);
+}
+
+.article1 .card-icon {
+    color: var(--color-brand);
+}
+
+.article2 .card-icon {
+    color: var(--color-teal);
+}
+
+.pics .card-icon,
+.agree .card-icon {
+    color: var(--color-brand-light);
+}
+
+/* Deep navy help block — authority, safety, 24/7 trust */
+.help {
+    grid-area: help;
+    text-align: center;
+    background-color: var(--color-trust);
+    color: var(--color-trust-text);
+    border-color: transparent;
+}
+
+.help .card-icon {
+    color: var(--color-gold);
+}
+
+.help .card-link {
+    color: var(--color-gold-light);
 }
 
 .news-text {
@@ -271,42 +469,231 @@ p {
     object-fit: cover;
 }
 
-.shortcut1,
-.shortcut2,
-.article1,
-.article2,
-.pics,
-.agree {
-    text-align: center;
-    background-color: var(--color-accent);
-    color: #fff;
-}
-
 .shortcut1 { grid-area: shortcut1; }
 .shortcut2 { grid-area: shortcut2; }
-
-.help {
-    grid-area: help;
-    text-align: center;
-    background-color: var(--color-purple);
-    color: aliceblue;
-}
 
 .article1 { grid-area: article1; }
 .article2 { grid-area: article2; }
 .pics { grid-area: pics; }
 .agree { grid-area: agree; }
 
-/* ===== Footer ===== */
+/* ===== Card content helpers ===== */
+.card-icon {
+    display: block;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-brand);
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 0.65rem;
+    color: var(--color-brand);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.card-link:hover {
+    opacity: 0.85;
+}
+
+.card-note {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+    opacity: 0.88;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.92rem;
+}
+
+.feature-list--compact li {
+    list-style: disc;
+    display: list-item;
+    margin-left: 1.1rem;
+}
+
+.help .feature-list li {
+    justify-content: flex-start;
+}
+
+/* ===== Timeline page ===== */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    text-align: left;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.65rem 0.85rem;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-time {
+    font-weight: 700;
+    font-size: 0.9rem;
+    min-width: 2.75rem;
+}
+
+.timeline-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-size: 0.88rem;
+}
+
+.timeline-body strong {
+    font-size: 0.95rem;
+}
+
+.timeline-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-trust-text);
+    white-space: nowrap;
+}
+
+.timeline-badge--busy { background: var(--color-gold-dark); color: var(--color-text-on-gold); }
+.timeline-badge--free { background: var(--color-success); color: #fff; }
+.timeline-badge--scheduled { background: var(--color-brand-light); color: #fff; }
+
+.timeline-item--active {
+    background: rgba(245, 184, 0, 0.12);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 0 -0.5rem;
+    border-left: 3px solid var(--color-gold);
+}
+
+.timeline-note {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ===== Contact page ===== */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.info-item i {
+    font-size: 1.25rem;
+    margin-top: 0.15rem;
+}
+
+.info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.info-item span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.contact-form-section {
+    text-align: left;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.contact-form .btn-light {
+    background-color: var(--color-brand);
+    color: var(--color-text-on-dark);
+    border: none;
+    font-weight: 700;
+}
+
+.contact-form .btn-light:hover {
+    background-color: var(--color-brand-light);
+    color: var(--color-text-on-dark);
+}
+
+/* ===== Gallery page ===== */
+.gallery-intro {
+    text-align: center;
+    background-color: var(--color-brand);
+    color: var(--color-text-on-dark);
+    border-color: transparent;
+}
+
+.gallery-intro .page-intro {
+    opacity: 0.9;
+}
+
+.gallery-card h3 {
+    margin: 0.65rem 0 0.35rem;
+    font-size: 1.05rem;
+}
+
+.gallery-image-wrap {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.gallery-image-wrap img {
+    width: 100%;
+    height: clamp(140px, 28vw, 200px);
+    object-fit: cover;
+}
+
+/* ===== Footer — grounding dark navy ===== */
 .site-footer {
     background-color: var(--color-footer);
     text-align: center;
-    color: antiquewhite;
+    color: var(--color-text-on-dark);
     padding: 1rem 0.75rem calc(var(--bottom-nav-height) + 0.75rem);
     font-size: clamp(0.8rem, 2vw, 0.95rem);
 }
 
-/* ===== Bottom navigation (all screen sizes) ===== */
+.footer-credit {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+/* ===== Bottom navigation ===== */
 .bottom-nav {
     position: fixed;
     left: 0;
@@ -318,9 +705,9 @@ p {
     align-items: stretch;
     min-height: var(--bottom-nav-height);
     padding: 0.35rem 0.5rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
-    background: var(--color-light);
-    border-top: 3px solid var(--color-dark);
-    box-shadow: 0 -4px 20px rgba(30, 6, 56, 0.18);
+    background: var(--color-surface);
+    border-top: var(--border-strong);
+    box-shadow: var(--shadow-nav);
 }
 
 .bottom-nav-item {
@@ -331,7 +718,7 @@ p {
     justify-content: center;
     gap: 0.15rem;
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-text-muted);
     font-size: 0.7rem;
     font-weight: 600;
     border-radius: 12px;
@@ -345,13 +732,17 @@ p {
 
 .bottom-nav-item:hover,
 .bottom-nav-item:focus {
-    color: var(--color-purple);
-    background-color: rgba(84, 101, 255, 0.12);
+    color: var(--color-brand);
+    background-color: rgba(11, 61, 110, 0.08);
 }
 
 .bottom-nav-item.active {
-    color: #fff;
-    background-color: var(--color-primary);
+    color: var(--color-text-on-dark);
+    background-color: var(--color-brand);
+}
+
+.bottom-nav-item.active i {
+    color: var(--color-gold);
 }
 
 .bottom-nav-item:active {
