@@ -185,7 +185,7 @@ Displays available vehicle categories.
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/index.png)
 
 ### Gallery Page
 
@@ -193,9 +193,15 @@ Displays available vehicle categories.
 
 ### Contact Page
 
-![Contact Page](screenshots/contact.png)
+![Contact Page](screenshots/contanctUs.png)
 
----
+### timeline Page
+
+![timeline Page](screenshots/timeline.png)
+
+### aboutUs Page
+
+![aboutUs Page](screenshots/aboutUs.png)
 
 ## 🚀 Future Improvements
 
