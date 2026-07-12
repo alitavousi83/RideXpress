@@ -12,20 +12,20 @@ const AVG_PICKUP_MINUTES = (3 + 4 + 5) / 3;
 const drivers = [
     {
         id: "RX-2041",
-        name: "Reza Ahmadi",
-        phone: "0916-123-4567",
+        name: "Ali Tavousi",
+        phone: "0916-293-2329",
         car: "BMW 320i",
-        photo: "pic/cars.jpg",
+        photo: "pic/BMW 320i.jpg",
         status: "available",
         rating: 4.9,
         plate: "ایران 64 /  514  ب 48 "
     },
     {
         id: "RX-1187",
-        name: "Mohammad Karimi",
-        phone: "0917-234-5678",
+        name: "Amir Karimi",
+        phone: "0930-363-3435",
         car: "Toyota RAV4 (SUV)",
-        photo: "pic/cars get in people .png",
+        photo: "pic/Toyota RAV4 (SUV).jpg",
         status: "busy",
         rating: 4.8,
         plate: "ایران 43 /  214  ب 12 "
@@ -33,9 +33,9 @@ const drivers = [
     {
         id: "RX-3309",
         name: "Ali Hosseini",
-        phone: "0918-345-6789",
+        phone: "0913-462-6123",
         car: "Hyundai Sonata",
-        photo: "pic/express.jpg",
+        photo: "pic/Hyundai Sonata.jpg",
         status: "available",
         rating: 4.7,
         plate: "ایران 67 /  214  ب 10 "
@@ -43,9 +43,9 @@ const drivers = [
     {
         id: "RX-0922",
         name: "Hassan Moradi",
-        phone: "0919-456-7890",
+        phone: "0913-899-8421",
         car: "BMW X5 (SUV)",
-        photo: "pic/women get in car .png",
+        photo: "pic/BMW X5 (SUV).jpg",
         status: "returning",
         rating: 4.9,
         plate: "ایران 09 /  317  ب 21 "
@@ -53,19 +53,19 @@ const drivers = [
     {
         id: "RX-5510",
         name: "Amir Sadat",
-        phone: "0920-567-8901",
+        phone: "0913-658-0564",
         car: "Peugeot 405",
-        photo: "pic/logo.png",
+        photo: "pic/Peugeot 405.jpg",
         status: "scheduled",
         rating: 4.6,
         plate: "ایران 81 /  416  ب 61 "
     },
     {
         id: "RX-7720",
-        name: "Sara Nazeri",
-        phone: "0921-678-9012",
+        name: "Ahmad Nazeri",
+        phone: "0938-614-8421",
         car: "Kia Cerato",
-        photo: "pic/trafic.jpg",
+        photo: "pic/Kia Cerato.jpg",
         status: "available",
         rating: 5.0,
         plate: "ایران 12 /  515  ب 21 "
@@ -73,11 +73,11 @@ const drivers = [
 ];
 
 const timelineRides = [
-    { time: "14:32", taxiId: "RX-2041", detail: "En route to Valiasr Sq — ETA 3 min", status: "moving" },
+    { time: "14:32", taxiId: "RX-2041", detail: "NikAbad to Isfahan — ETA 3 min", status: "moving" },
     { time: "14:28", taxiId: "RX-1187", detail: "Passenger picked up — heading to Airport", status: "busy" },
-    { time: "14:25", taxiId: "RX-3309", detail: "Waiting at Tajrish Station — available now", status: "free" },
-    { time: "14:19", taxiId: "RX-0922", detail: "Completed ride — returning to downtown", status: "returning" },
-    { time: "14:10", taxiId: "RX-5510", detail: "Scheduled pickup at 14:45 — Azadi Tower", status: "scheduled" }
+    { time: "14:25", taxiId: "RX-3309", detail: "Waiting at Mohammad Abad — available now", status: "free" },
+    { time: "14:19", taxiId: "RX-0922", detail: "Completed ride — returning to NasrAbad", status: "returning" },
+    { time: "14:10", taxiId: "RX-5510", detail: "Scheduled pickup at 14:45 — SaadatAbad", status: "scheduled" }
 ];
 
 const galleryItems = [
