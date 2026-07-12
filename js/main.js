@@ -17,7 +17,8 @@ const drivers = [
         car: "BMW 320i",
         photo: "pic/cars.jpg",
         status: "available",
-        rating: 4.9
+        rating: 4.9,
+        plate: "ایران 64 /  514  ب 48 "
     },
     {
         id: "RX-1187",
@@ -26,7 +27,8 @@ const drivers = [
         car: "Toyota RAV4 (SUV)",
         photo: "pic/cars get in people .png",
         status: "busy",
-        rating: 4.8
+        rating: 4.8,
+        plate: "ایران 43 /  214  ب 12 "
     },
     {
         id: "RX-3309",
@@ -35,7 +37,8 @@ const drivers = [
         car: "Hyundai Sonata",
         photo: "pic/express.jpg",
         status: "available",
-        rating: 4.7
+        rating: 4.7,
+        plate: "ایران 67 /  214  ب 10 "
     },
     {
         id: "RX-0922",
@@ -44,7 +47,8 @@ const drivers = [
         car: "BMW X5 (SUV)",
         photo: "pic/women get in car .png",
         status: "returning",
-        rating: 4.9
+        rating: 4.9,
+        plate: "ایران 09 /  317  ب 21 "
     },
     {
         id: "RX-5510",
@@ -53,7 +57,8 @@ const drivers = [
         car: "Peugeot 405",
         photo: "pic/logo.png",
         status: "scheduled",
-        rating: 4.6
+        rating: 4.6,
+        plate: "ایران 81 /  416  ب 61 "
     },
     {
         id: "RX-7720",
@@ -62,7 +67,8 @@ const drivers = [
         car: "Kia Cerato",
         photo: "pic/trafic.jpg",
         status: "available",
-        rating: 5.0
+        rating: 5.0,
+        plate: "ایران 12 /  515  ب 21 "
     }
 ];
 
@@ -213,7 +219,7 @@ const galleryItems = [
                         '</div>' +
                         '<p class="card-text text-muted mb-1"><i class="bi bi-car-front"></i> ' + driver.car + '</p>' +
                         '<p class="card-text mb-1"><i class="bi bi-star-fill text-warning"></i> ' + driver.rating + ' / 5</p>' +
-                        '<p class="card-text small text-muted">ID: ' + driver.id + '</p>' +
+                        '<div class="iran-plate" dir="ltr"><span class="iran-plate-label">پلاک</span> ' + driver.plate + '</div>' +
                         '<a href="' + phoneLink + '" class="btn btn-primary mt-auto">' +
                             '<i class="bi bi-telephone-fill"></i> ' + driver.phone +
                         '</a>' +

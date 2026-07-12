@@ -58,3 +58,30 @@
     color: var(--color-text-muted);
     margin-bottom: 0.75rem;
 }
+
+.iran-plate {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0.35rem;
+    margin-bottom: 0.5rem;
+    padding: 0.45rem 0.65rem;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #1a1a1a;
+    box-shadow: inset 0 0 0 1px #003399;
+}
+
+.iran-plate-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 0.15rem;
+}
