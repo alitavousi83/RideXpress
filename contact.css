@@ -1,0 +1,60 @@
+.contact-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.contact-header {
+    background-color: var(--color-trust);
+    color: var(--color-trust-text);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-card);
+}
+
+.contact-header h1 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-bar .btn {
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.filter-bar .btn.active {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: #fff;
+}
+
+.driver-card {
+    border: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.driver-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(11, 61, 110, 0.15);
+}
+
+.driver-photo {
+    height: 180px;
+    object-fit: cover;
+}
+
+.driver-count-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+}

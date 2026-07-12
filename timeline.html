@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body data-page="timeline">
 
     <div class="promo-banner">
         <strong>75% commission discount for new drivers</strong>
@@ -52,48 +52,9 @@
             <h2><i class="bi bi-clock-fill"></i> Live Taxi Timeline</h2>
             <p class="page-intro">Track active rides and estimated arrival times across the city.</p>
 
-            <ul class="timeline-list">
-                <li class="timeline-item timeline-item--active">
-                    <span class="timeline-time">14:32</span>
-                    <div class="timeline-body">
-                        <strong>Taxi #RX-2041</strong>
-                        <span>En route to Valiasr Sq — ETA 3 min</span>
-                    </div>
-                    <span class="timeline-badge">Moving</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-time">14:28</span>
-                    <div class="timeline-body">
-                        <strong>Taxi #RX-1187</strong>
-                        <span>Passenger picked up — heading to Airport</span>
-                    </div>
-                    <span class="timeline-badge timeline-badge--busy">On trip</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-time">14:25</span>
-                    <div class="timeline-body">
-                        <strong>Taxi #RX-3309</strong>
-                        <span>Waiting at Tajrish Station — available now</span>
-                    </div>
-                    <span class="timeline-badge timeline-badge--free">Available</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-time">14:19</span>
-                    <div class="timeline-body">
-                        <strong>Taxi #RX-0922</strong>
-                        <span>Completed ride — returning to downtown</span>
-                    </div>
-                    <span class="timeline-badge">Returning</span>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-time">14:10</span>
-                    <div class="timeline-body">
-                        <strong>Taxi #RX-5510</strong>
-                        <span>Scheduled pickup at 14:45 — Azadi Tower</span>
-                    </div>
-                    <span class="timeline-badge timeline-badge--scheduled">Scheduled</span>
-                </li>
-            </ul>
+            <ul class="timeline-list" id="timeline-list"></ul>
+
+            <canvas id="timeline-canvas" class="timeline-canvas" aria-label="Trip route animation"></canvas>
 
             <p class="card-note timeline-note">
                 <i class="bi bi-arrow-repeat"></i> Times refresh automatically during peak hours.
@@ -115,12 +76,13 @@
             <i class="bi bi-clock-fill"></i>
             <span>Timeline</span>
         </a>
-        <a href="contanctUs.html" class="bottom-nav-item">
+        <a href="contact.html" class="bottom-nav-item">
             <i class="bi bi-telephone-fill"></i>
             <span>Contact</span>
         </a>
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

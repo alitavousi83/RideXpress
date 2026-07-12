@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body data-page="home">
 
     <div class="promo-banner">
         <strong>75% commission discount for new drivers</strong>
@@ -58,9 +58,9 @@
                     <h1>Your City, Your Ride</h1>
                     <p class="hero-lead">Book a trusted taxi in seconds. Safe drivers, fair prices, 24/7 service across the city.</p>
                     <div class="hero-stats">
-                        <span><i class="bi bi-lightning-charge-fill"></i> ~4 min pickup</span>
+                        <span><i class="bi bi-lightning-charge-fill"></i> <span data-live-pickup>~4 min pickup</span></span>
                         <span><i class="bi bi-shield-check"></i> Verified drivers</span>
-                        <span><i class="bi bi-cash-coin"></i> Cash & card</span>
+                        <span><i class="bi bi-car-front"></i> <span data-live-drivers>0 drivers online</span></span>
                     </div>
                 </div>
                 <div class="ali">
@@ -78,6 +78,7 @@
             <div class="news-image-wrap">
                 <img src="pic/trafic.jpg" alt="City traffic and taxi routes">
             </div>
+            <canvas id="taxi-map" class="taxi-map-canvas" aria-label="Live taxi map"></canvas>
         </section>
 
         <section class="shortcut1 card-section">
@@ -153,12 +154,13 @@
             <i class="bi bi-clock-fill"></i>
             <span>Timeline</span>
         </a>
-        <a href="contanctUs.html" class="bottom-nav-item">
+        <a href="contact.html" class="bottom-nav-item">
             <i class="bi bi-telephone-fill"></i>
             <span>Contact</span>
         </a>
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

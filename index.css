@@ -748,3 +748,14 @@ p {
 .bottom-nav-item:active {
     transform: scale(0.96);
 }
+
+/* ===== Canvas (JavaScript animations) ===== */
+.taxi-map-canvas,
+.timeline-canvas {
+    width: 100%;
+    height: clamp(100px, 20vw, 160px);
+    margin-top: 0.75rem;
+    border-radius: var(--radius-sm);
+    border: var(--border-subtle);
+    display: block;
+}
