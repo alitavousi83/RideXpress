@@ -4,9 +4,9 @@
 
 # 🚖 RideXpress
 
-A modern, responsive taxi service website developed using HTML5, CSS3, Bootstrap 5, and Bootstrap Icons.
+A modern, responsive taxi service website developed using HTML5, CSS3, Bootstrap 5, Bootstrap Icons, and JavaScript.
 
-The project demonstrates responsive web design principles, CSS Grid layouts, Flexbox alignment techniques, reusable design tokens, and modern UI/UX practices.
+The project demonstrates responsive web design principles, CSS Grid layouts, Flexbox alignment techniques, reusable design tokens, modern UI/UX practices, and interactive JavaScript programming concepts.
 
 ---
 
@@ -18,7 +18,6 @@ The website includes:
 
 * Responsive navigation system
 * Promotional banner
-* Hero section
 * Service announcements
 * Taxi booking shortcuts
 * Customer support information
@@ -27,6 +26,9 @@ The website includes:
 * Contact page
 * Gallery page
 * Timeline page
+* Interactive JavaScript features
+* Dynamic user interface updates
+* Canvas-based graphics and animations
 
 ---
 
@@ -40,18 +42,24 @@ The main goals of this project are:
 * Use Bootstrap components effectively
 * Create a clean and user-friendly interface
 * Apply color psychology principles
+* Practice JavaScript programming fundamentals
+* Work with DOM manipulation
+* Build interactive user experiences
+* Learn HTML5 Canvas drawing techniques
 
 ---
 
 ## 🛠 Technologies Used
 
-| Technology           | Purpose              |
-| -------------------- | -------------------- |
-| 🌐 HTML5             | Structure            |
-| 🎨 CSS3              | Styling              |
-| 🅱 Bootstrap 5.3.3   | Responsive Framework |
-| 🎯 Bootstrap Icons   | Icons                |
-| 📱 Responsive Design | Mobile Compatibility |
+| Technology           | Purpose                     |
+| -------------------- | --------------------------- |
+| 🌐 HTML5             | Structure                   |
+| 🎨 CSS3              | Styling                     |
+| 🅱 Bootstrap 5.3.3   | Responsive Framework        |
+| 🎯 Bootstrap Icons   | Icons                       |
+| 📱 Responsive Design | Mobile Compatibility        |
+| ⚡ JavaScript (ES6+) | Interactivity & Logic       |
+| 🎨 HTML5 Canvas      | Graphics & Drawing          |
 
 ---
 
@@ -60,12 +68,18 @@ The main goals of this project are:
 ```text
 RideXpress/
 │
-├── index.html
+├── .gitignore
 ├── aboutUs.html
-├── gallery.html
+├── contact.css
+├── contact.html
 ├── contanctUs.html
-├── timeline.html
+├── gallery.html
 ├── index.css
+├── index.html
+├── timeline.html
+│
+├── js/
+│   └── main.js
 │
 ├── pic/
 │   ├── logo.png
@@ -136,6 +150,57 @@ align-items: center;
 
 ---
 
+## 💻 JavaScript Features
+
+The project has been enhanced with JavaScript to create a more dynamic and interactive user experience.
+
+### Variables
+
+The application uses JavaScript variables (`let`, `const`) to store and manage application data efficiently.
+
+### Conditional Statements
+
+Conditional logic is implemented using:
+
+* `if`
+* `else`
+* `else if`
+* `switch`
+
+to control application behavior based on user interactions.
+
+### Loops
+
+Different loop structures are used, including:
+
+* `for`
+* `while`
+* `do...while`
+* `for...of`
+
+to process collections of data efficiently.
+
+### Pattern Generation
+
+JavaScript loops are used to generate different programming patterns, helping demonstrate algorithmic thinking and loop logic.
+
+### DOM Manipulation
+
+The project uses the Document Object Model (DOM) to:
+
+* Select HTML elements
+* Modify page content dynamically
+* Change styles
+* Add and remove elements
+* Handle user interactions
+* Update the interface without reloading the page
+
+### Canvas
+
+HTML5 Canvas is used for graphical rendering, allowing JavaScript to draw shapes, lines, text, and interactive visual elements directly in the browser.
+
+---
+
 ## 📱 Responsive Design
 
 The project follows a Mobile-First approach.
@@ -179,6 +244,32 @@ Includes information about:
 
 Displays available vehicle categories.
 
+### ⚡ Interactive JavaScript
+
+* Dynamic DOM updates
+* Interactive buttons
+* Conditional rendering
+* Loop-based content generation
+* Canvas drawing
+* Real-time user interaction
+
+---
+
+## 🧠 JavaScript Concepts Demonstrated
+
+This project demonstrates practical use of the following JavaScript concepts:
+
+* Variables (`let`, `const`)
+* Expressions
+* Operators
+* Conditional Statements
+* Loops
+* Pattern Generation
+* Functions
+* DOM Manipulation
+* Event Handling
+* HTML5 Canvas API
+
 ---
 
 ## 📸 Screenshots
@@ -203,6 +294,12 @@ Displays available vehicle categories.
 
 ![aboutUs Page](screenshots/aboutUs.png)
 
+### Drivers Page
+
+![aboutUs Page](screenshots/drivers.png)
+
+---
+
 ## 🚀 Future Improvements
 
 * Online booking form
@@ -211,6 +308,10 @@ Displays available vehicle categories.
 * Driver dashboard
 * Real-time location tracking
 * Payment gateway integration
+* Advanced JavaScript animations
+* API integration
+* Local Storage support
+* Dark mode
 
 ---
 
@@ -224,5 +325,4 @@ Frontend Developer Student
 
 ## 📚 Educational Purpose
 
-This project was developed as a university web design assignment to demonstrate practical frontend development skills using HTML, CSS, Bootstrap, Grid Layouts, and Responsive Design.
-
+This project was developed as a university web design assignment to demonstrate practical frontend development skills using HTML, CSS, Bootstrap, Grid Layouts, Responsive Design, JavaScript fundamentals, DOM manipulation, and HTML5 Canvas.
