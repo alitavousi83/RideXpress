@@ -18,7 +18,7 @@ const drivers = [
         photo: "pic/BMW 320i.jpg",
         status: "available",
         rating: 4.9,
-        plate: "ایران 64 /  514  ب 48 "
+        plate: "48 B 514 / IR 67"
     },
     {
         id: "RX-1187",
@@ -28,7 +28,7 @@ const drivers = [
         photo: "pic/Toyota RAV4 (SUV).jpg",
         status: "busy",
         rating: 4.8,
-        plate: "ایران 43 /  214  ب 12 "
+        plate: "12 A 486 / IR 12"
     },
     {
         id: "RX-3309",
@@ -38,7 +38,7 @@ const drivers = [
         photo: "pic/Hyundai Sonata.jpg",
         status: "available",
         rating: 4.7,
-        plate: "ایران 67 /  214  ب 10 "
+        plate: "11 C 215 / IR 41"
     },
     {
         id: "RX-0922",
@@ -48,7 +48,7 @@ const drivers = [
         photo: "pic/BMW X5 (SUV).jpg",
         status: "returning",
         rating: 4.9,
-        plate: "ایران 09 /  317  ب 21 "
+        plate: "51 D 117 / IR 26"
     },
     {
         id: "RX-5510",
@@ -58,7 +58,7 @@ const drivers = [
         photo: "pic/Peugeot 405.jpg",
         status: "scheduled",
         rating: 4.6,
-        plate: "ایران 81 /  416  ب 61 "
+        plate: "46 H 861 / IR 85"
     },
     {
         id: "RX-7720",
@@ -68,7 +68,7 @@ const drivers = [
         photo: "pic/Kia Cerato.jpg",
         status: "available",
         rating: 5.0,
-        plate: "ایران 12 /  515  ب 21 "
+        plate: "45 Q 216 / IR 69"
     }
 ];
 
