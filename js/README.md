@@ -19,23 +19,23 @@ This document explains every part of `main.js`, what it does, and which JavaScri
 | 📱 Simple constants | [Go => 2.1](#page-02) |
 | 📊 an array of objects | [Go => 2.2/2.3](#page-03) |
 | 🧩 Module-level | [Go => 3.1](#page-04) |
-| 🅱️ Bootcamp | [Go => 1](#page-05) |
-| ❓ what is Bootstrap | [Go => 1](#page-06) |
-| 🗺️ layout | [Go => 1](#page-07) |
-| ✨ positioning | [Go => 1](#page-08) |
-| 📱 display | [Go => 1](#page-09) |
-| 🫧 float | [Go => 1](#page-10) |
-| 📲 Responsive | [Go => 1](#page-11) |
-| 📊 flex | [Go => 1](#page-12) |
-| 📶 grid | [Go => 1](#page-13) |
-| 📱 Simple constants | [Go => 2.1](#page-14) |
-| 🧩 components | [Go => 1](#page-15) |
-| 🅱️ Bootcamp | [Go => 1](#page-16) |
-| ❓ what is Bootstrap | [Go => 1](#page-17) |
-| 🗺️ layout | [Go => 1](#page-18) |
-| ✨ positioning | [Go => 1](#page-19) |
-| 📱 display | [Go => 1](#page-20) |
-| 🫧 float | [Go => 1](#page-21) |
+| 🅱️ getCurrentPage() | [Go => 3.2](#page-05) |
+| ❓ countAvailableDrivers() | [Go => 3.3](#page-06) |
+| 🗺️ getStatusLabel(status)| [Go => 3.4](#page-07) |
+| ✨ getTrafficMessage() | [Go => 3.5](#page-08) |
+| 📱 highlightActiveNavigation() | [Go => 3.6](#page-09) |
+| 🫧 updateTrafficAlert() | [Go => 3.7](#page-10) |
+| 📲 updateHeroStats() | [Go => 3.8](#page-11) |
+| 📊 renderDriverCards(filterStatus) | [Go => 3.9](#page-12) |
+| 📶 setupDriverFilters() | [Go => 3.10](#page-13) |
+| 📱 renderTimeline() | [Go => 3.11](#page-14) |
+| 🧩 renderGallery() | [Go => 3.12](#page-15) |
+| 🅱️ setupContactForm() | [Go => 3.13](#page-16) |
+| ❓ initTaxiCanvas() | [Go => 3.14](#page-17) |
+| 🗺️ initTimelineCanvas() | [Go => 3.15](#page-18) |
+| ✨ initPage() | [Go => 3.16](#page-19) |
+| 📱 Bootstrapping and cleanup | [Go => 3.17](#page-20) |
+| 🫧  Summary | [Go => 4](#page-21) |
 
 
 </div>
