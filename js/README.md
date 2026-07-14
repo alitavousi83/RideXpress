@@ -17,16 +17,26 @@ This document explains every part of `main.js`, what it does, and which JavaScri
 |-------|------|
 | 🏗️ File-level structure | [Go => 1](#page-01) |
 | 📱 Simple constants | [Go => 2.1](#page-02) |
-| 🧩 components | [page 12-20 →](#page-12) |
-| 🅱️ Bootcamp | [page 20 →](#page-17) |
-| ❓ what is Bootstrap | [page 21 →](#page-21) |
-| 🗺️ layout | [page 22 →](#page-22) |
-| ✨ positioning | [page 20 →](#page-20) |
-| 📱 display | [page 21 →](#page-21) |
-| 🫧 float | [page 22 →](#page-22) |
-| 📲 Responsive | [page 23 →](#page-23) |
-| 📊 flex | [page 24 →](#page-24) |
-| 📶 grid | [page 25 →](#page-25) |
+| 📊 an array of objects | [Go => 2.2/2.3](#page-03) |
+| 🧩 Module-level | [Go => 3.1](#page-04) |
+| 🅱️ Bootcamp | [Go => 1](#page-05) |
+| ❓ what is Bootstrap | [Go => 1](#page-06) |
+| 🗺️ layout | [Go => 1](#page-07) |
+| ✨ positioning | [Go => 1](#page-08) |
+| 📱 display | [Go => 1](#page-09) |
+| 🫧 float | [Go => 1](#page-10) |
+| 📲 Responsive | [Go => 1](#page-11) |
+| 📊 flex | [Go => 1](#page-12) |
+| 📶 grid | [Go => 1](#page-13) |
+| 📱 Simple constants | [Go => 2.1](#page-14) |
+| 🧩 components | [Go => 1](#page-15) |
+| 🅱️ Bootcamp | [Go => 1](#page-16) |
+| ❓ what is Bootstrap | [Go => 1](#page-17) |
+| 🗺️ layout | [Go => 1](#page-18) |
+| ✨ positioning | [Go => 1](#page-19) |
+| 📱 display | [Go => 1](#page-20) |
+| 🫧 float | [Go => 1](#page-21) |
+
 
 </div>
 
