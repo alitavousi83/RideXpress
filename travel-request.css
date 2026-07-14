@@ -1,0 +1,276 @@
+/* ============================================================
+   Travel Request page — styles
+   Built on top of the shared design tokens defined in index.css
+   (--color-brand, --color-gold, --color-teal, --radius-sm, etc.)
+   ============================================================ */
+
+.travel-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* ===== Header — matches contact-header pattern ===== */
+.travel-header {
+    background-color: var(--color-trust);
+    color: var(--color-trust-text);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-card);
+}
+
+.travel-header h1 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+/* ===== Driver / Passenger mode switch ===== */
+.travel-form-section {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.mode-switch {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.mode-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.75rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: var(--radius-sm);
+    border: var(--border-subtle);
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.mode-btn:hover {
+    background-color: rgba(11, 61, 110, 0.08);
+}
+
+.mode-btn.active {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-text-on-dark);
+}
+
+.mode-btn.active i {
+    color: var(--color-gold);
+}
+
+/* ===== Forms ===== */
+.travel-form .form-label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.travel-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.travel-form .btn-light {
+    background-color: var(--color-brand);
+    color: var(--color-text-on-dark);
+    border: none;
+    font-weight: 700;
+}
+
+.travel-form .btn-light:hover {
+    background-color: var(--color-brand-light);
+    color: var(--color-text-on-dark);
+}
+
+/* ===== Saved-announcement tabs ===== */
+.travel-lists {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.travel-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.travel-tab-btn {
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    padding: 0.45rem 0.85rem;
+    border: var(--border-subtle);
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.travel-tab-btn:hover {
+    background-color: rgba(11, 61, 110, 0.08);
+}
+
+.travel-tab-btn.active {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: #fff;
+}
+
+.driver-count-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.travel-panel .empty-state {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== Announcement card ===== */
+.travel-card {
+    border: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.travel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(11, 61, 110, 0.15);
+}
+
+.travel-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.travel-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.travel-card-name {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.travel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.travel-badge--driver {
+    background-color: var(--color-brand);
+    color: #fff;
+}
+
+.travel-badge--passenger {
+    background-color: var(--color-teal);
+    color: #fff;
+}
+
+.travel-badge--private {
+    background-color: var(--color-gold-dark);
+    color: var(--color-text-on-gold);
+}
+
+.travel-route {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.travel-route i {
+    color: var(--color-teal);
+}
+
+.travel-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.travel-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.travel-meta i {
+    color: var(--color-gold-dark);
+}
+
+.travel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.travel-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    background: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    border: var(--border-subtle);
+}
+
+.travel-tag--on {
+    background: var(--color-success-light);
+    color: var(--color-success);
+    border-color: transparent;
+}
+
+.travel-call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding: 0.55rem;
+    border-radius: 8px;
+    background-color: var(--color-success);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.travel-call-btn:hover {
+    opacity: 0.88;
+    color: #fff;
+}

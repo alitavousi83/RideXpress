@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Request — RideXpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="travel-request.css">
+</head>
+<body data-page="travel-request">
+
+    <div class="promo-banner">
+        <strong>75% commission discount for new drivers</strong>
+        <sup class="promo-badge">*limited time*</sup>
+        — Join RideXpress today and start earning!
+    </div>
+
+    <nav class="navbar navbar-expand-lg site-navbar sticky-top">
+        <div class="container-fluid px-3 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="pic/logo.png" alt="RideXpress" class="nav-logo">
+                <span class="brand-text">RideXpress</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contanctUs.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="travel-request.html">Travel Request</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="travel-main">
+
+        <header class="travel-header">
+            <h1><i class="bi bi-signpost-split-fill"></i> Travel Requests</h1>
+            <p class="page-intro mb-0">Post a driver announcement or a passenger request, then browse open trips across the city.</p>
+        </header>
+
+        <!-- ===== Post a new announcement ===== -->
+        <section class="travel-form-section card-section">
+
+            <div class="mode-switch" role="tablist" aria-label="Choose announcement type">
+                <button type="button" class="mode-btn active" data-mode="driver" role="tab" aria-selected="true">
+                    <i class="bi bi-steering-wheel"></i> I'm a Driver
+                </button>
+                <button type="button" class="mode-btn" data-mode="passenger" role="tab" aria-selected="false">
+                    <i class="bi bi-person-walking"></i> I'm a Passenger
+                </button>
+            </div>
+
+            <!-- Driver form -->
+            <form id="driver-form" class="travel-form" novalidate>
+                <div id="driver-feedback" class="alert d-none" role="alert"></div>
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="driver-name" class="form-label">Driver name</label>
+                        <input type="text" class="form-control" id="driver-name" placeholder="Full name">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="driver-phone" class="form-label">Phone number</label>
+                        <input type="tel" class="form-control" id="driver-phone" placeholder="09xx xxx xxxx">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="driver-plate" class="form-label">License plate number</label>
+                        <input type="text" class="form-control" id="driver-plate" placeholder="e.g. 64 / 514 ب 48">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="driver-vehicle-type" class="form-label">Vehicle type</label>
+                        <select class="form-select" id="driver-vehicle-type">
+                            <option value="" selected disabled>Choose…</option>
+                            <option>Sedan</option>
+                            <option>SUV</option>
+                            <option>Hatchback</option>
+                            <option>Van</option>
+                            <option>Pickup</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="driver-vehicle-color" class="form-label">Vehicle color</label>
+                        <select class="form-select" id="driver-vehicle-color">
+                            <option value="" selected disabled>Choose…</option>
+                            <option>White</option>
+                            <option>Black</option>
+                            <option>Silver</option>
+                            <option>Gray</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="driver-origin" class="form-label">Origin</label>
+                        <input type="text" class="form-control" id="driver-origin" placeholder="Pickup area">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="driver-destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="driver-destination" placeholder="Drop-off area">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="driver-departure-date" class="form-label">Departure date</label>
+                        <input type="date" class="form-control" id="driver-departure-date">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="driver-departure-time" class="form-label">Departure time</label>
+                        <input type="time" class="form-control" id="driver-departure-time">
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label for="driver-total-seats" class="form-label">Total available seats</label>
+                        <input type="number" class="form-control" id="driver-total-seats" min="0" step="1" placeholder="0">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="driver-seats-women" class="form-label">Reserved seats — women</label>
+                        <input type="number" class="form-control" id="driver-seats-women" min="0" step="1" placeholder="0">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="driver-seats-men" class="form-label">Reserved seats — men</label>
+                        <input type="number" class="form-control" id="driver-seats-men" min="0" step="1" placeholder="0">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-light w-100 mt-3">Post Driver Announcement</button>
+            </form>
+
+            <!-- Passenger form -->
+            <form id="passenger-form" class="travel-form d-none" novalidate>
+                <div id="passenger-feedback" class="alert d-none" role="alert"></div>
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="passenger-name" class="form-label">Passenger name</label>
+                        <input type="text" class="form-control" id="passenger-name" placeholder="Full name">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="passenger-phone" class="form-label">Phone number</label>
+                        <input type="tel" class="form-control" id="passenger-phone" placeholder="09xx xxx xxxx">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="passenger-origin" class="form-label">Origin</label>
+                        <input type="text" class="form-control" id="passenger-origin" placeholder="Pickup area">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="passenger-destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="passenger-destination" placeholder="Drop-off area">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="passenger-date" class="form-label">Travel date</label>
+                        <input type="date" class="form-control" id="passenger-date">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="passenger-time" class="form-label">Requested departure time</label>
+                        <input type="time" class="form-control" id="passenger-time">
+                    </div>
+
+                    <fieldset class="col-12">
+                        <legend class="form-label mb-1">Gender</legend>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="passenger-gender" id="passenger-gender-male" value="male" checked>
+                                <label class="form-check-label" for="passenger-gender-male">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="passenger-gender" id="passenger-gender-female" value="female">
+                                <label class="form-check-label" for="passenger-gender-female">Female</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="col-sm-4">
+                        <label for="passenger-count" class="form-label">Number of passengers</label>
+                        <input type="number" class="form-control" id="passenger-count" min="0" step="1" placeholder="0">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="passenger-count-male" class="form-label">Male passengers</label>
+                        <input type="number" class="form-control" id="passenger-count-male" min="0" step="1" placeholder="0">
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="passenger-count-female" class="form-label">Female passengers</label>
+                        <input type="number" class="form-control" id="passenger-count-female" min="0" step="1" placeholder="0">
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="passenger-luggage">
+                            <label class="form-check-label" for="passenger-luggage">Has extra luggage</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="passenger-private">
+                            <label class="form-check-label" for="passenger-private">Wants a private ride (Darbast)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-light w-100 mt-3">Post Passenger Request</button>
+            </form>
+        </section>
+
+        <!-- ===== Saved announcements ===== -->
+        <section class="travel-lists card-section">
+            <div class="travel-tabs" role="tablist" aria-label="Announcement lists">
+                <button type="button" class="travel-tab-btn active" data-tab="passengers" role="tab" aria-selected="true">
+                    All Passenger Announcements
+                </button>
+                <button type="button" class="travel-tab-btn" data-tab="drivers" role="tab" aria-selected="false">
+                    All Driver Announcements
+                </button>
+                <button type="button" class="travel-tab-btn" data-tab="private" role="tab" aria-selected="false">
+                    Private Ride Requests
+                </button>
+            </div>
+
+            <p id="travel-count" class="driver-count-label">Loading announcements…</p>
+
+            <div id="passengers-panel" class="travel-panel row g-3"></div>
+            <div id="drivers-panel" class="travel-panel row g-3 d-none"></div>
+            <div id="private-panel" class="travel-panel row g-3 d-none"></div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>RideXpress &copy; 2026 — Fast taxi service you can trust</p>
+        <p class="footer-credit">Website by Ali Tavousi</p>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Quick navigation">
+        <a href="index.html" class="bottom-nav-item">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
+        </a>
+        <a href="timeline.html" class="bottom-nav-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>Timeline</span>
+        </a>
+        <a href="contact.html" class="bottom-nav-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>Drivers</span>
+        </a>
+        <a href="travel-request.html" class="bottom-nav-item active">
+            <i class="bi bi-signpost-split-fill"></i>
+            <span>Travel</span>
+        </a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/travel-request.js"></script>
+</body>
+</html>
