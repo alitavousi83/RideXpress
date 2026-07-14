@@ -3,7 +3,37 @@
 
 This document explains every part of `main.js`, what it does, and which JavaScript language feature or Web API it demonstrates. It's organized in the same order as the file itself: **Data → Application Logic**.
 
+
 ---
+---
+---
+<div align="center">
+
+<a id="table"></a>
+
+# 📚 Table of Contents
+
+| Topic | Jump |
+|-------|------|
+| 🏗️ File-level structure | [Go => 1](#page-01) |
+| 📱 Simple constants | [Go => 2.1](#page-02) |
+| 🧩 components | [page 12-20 →](#page-12) |
+| 🅱️ Bootcamp | [page 20 →](#page-17) |
+| ❓ what is Bootstrap | [page 21 →](#page-21) |
+| 🗺️ layout | [page 22 →](#page-22) |
+| ✨ positioning | [page 20 →](#page-20) |
+| 📱 display | [page 21 →](#page-21) |
+| 🫧 float | [page 22 →](#page-22) |
+| 📲 Responsive | [page 23 →](#page-23) |
+| 📊 flex | [page 24 →](#page-24) |
+| 📶 grid | [page 25 →](#page-25) |
+
+</div>
+
+---
+---
+---
+<a id="page-01"></a>
 
 ## 1. File-level structure
 
@@ -180,11 +210,12 @@ name = "Ali";
 > برای فعال کردن حالت Strict Mode تا خطاهای رایج جاوااسکریپت زودتر شناسایی شوند، از ایجاد متغیرهای ناخواسته جلوگیری شود و امنیت و کیفیت کد افزایش پیدا کند.
 
 
+[⬆ Back to Top](#table)
 
 ---
 ---
 ---
-
+<a id="page-02"></a>
 
 ## 2. Data section
 
@@ -425,6 +456,7 @@ JavaScript همیشه ابتدا نتیجه‌ی عبارت را محاسبه م
 ---
 ---
 ---
+<a id="page-03"></a>
 
 ### 2.2 `drivers` — an array of objects
 
@@ -808,6 +840,7 @@ const galleryItems = [
 ---
 ---
 
+<a id="page-04"></a>
 
 ## 3. Application logic (inside the IIFE)
 
@@ -1164,10 +1197,11 @@ Closure باعث می‌شود:
 
 > توابع داخلی مانند `drawFrame()` به متغیرهای تعریف‌شده در محدوده‌ی بیرونی (مانند `taxiDots` و `animationFrameId`) دسترسی دارند و حتی پس از پایان اجرای تابع بیرونی نیز این متغیرها را حفظ می‌کنند. این ویژگی JavaScript را **Closure** می‌نامند و باعث حفظ وضعیت (State) برنامه و اجرای صحیح انیمیشن‌ها می‌شود.
 
-
+[⬆ Back to Top](#table)
 ---
 ---
 ---
+<a id="page-05"></a>
 ### 3.2 `getCurrentPage()`
 
 ```js
@@ -1642,10 +1676,14 @@ else if(page === "timeline"){
 
 > زیرا `dataset` راه استاندارد DOM برای دسترسی به ویژگی‌های سفارشی HTML5 (`data-*`) است. این روش باعث می‌شود اطلاعاتی مانند نام صفحه بدون نیاز به متغیرهای سراسری یا کدنویسی تکراری، مستقیماً از HTML در اختیار JavaScript قرار گیرد.
 
+[⬆ Back to Top](#table)
 
 ---
 ---
 ---
+
+<a id="page-06"></a>
+
 ### 3.3 `countAvailableDrivers()`
 
 ```js
@@ -2169,11 +2207,15 @@ const count = drivers.filter(driver => driver.status === "available").length;
 
 > چون `===` علاوه بر مقدار، نوع داده را نیز مقایسه می‌کند و از تبدیل خودکار نوع داده (Type Coercion) جلوگیری می‌کند؛ بنابراین نسبت به `==` دقیق‌تر و ایمن‌تر است و در برنامه‌های حرفه‌ای استفاده از آن توصیه می‌شود.
 
+[⬆ Back to Top](#table)
 
 
 ---
 ---
 ---
+
+<a id="page-07"></a>
+
 ### 3.4 `getStatusBadgeClass(status)` / `getStatusLabel(status)`
 
 ```js
