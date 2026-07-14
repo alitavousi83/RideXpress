@@ -222,6 +222,7 @@ name = "Ali";
 
 [⬆ Back to Top](#table)
 
+
 ---
 ---
 ---
@@ -461,6 +462,9 @@ JavaScript همیشه ابتدا نتیجه‌ی عبارت را محاسبه م
 پاسخ:
 
 > برای نشان دادن اینکه JavaScript قبل از انتساب مقدار، عبارت سمت راست را محاسبه می‌کند. این موضوع مفهوم **Expression Evaluation** (ارزیابی عبارت) را نشان می‌دهد و ثابت می‌کند که مقدار متغیر می‌تواند نتیجه‌ی یک محاسبه باشد، نه فقط یک عدد ثابت.
+
+
+[⬆ Back to Top](#table)
 
 
 ---
@@ -845,6 +849,8 @@ const galleryItems = [
 
 > زیرا هر آیتم دارای چند ویژگی مرتبط است و این ساختار امکان ذخیره‌سازی منظم داده‌ها، پیمایش با حلقه‌ها و تولید خودکار عناصر HTML را فراهم می‌کند. این الگو یکی از رایج‌ترین روش‌های مدیریت داده در برنامه‌های JavaScript است.
 
+[⬆ Back to Top](#table)
+
 
 ---
 ---
@@ -1222,6 +1228,9 @@ function getCurrentPage() {
 
 - **`document.body.dataset`**: reads the HTML5 `data-*` attributes (e.g., `data-page="home"` on `<body>`) via the **DOM `dataset` API**, which auto-converts `data-page` into `dataset.page`.
 - **`||` (logical OR) fallback**: if `dataset.page` is `undefined` (falsy), the function returns `""` instead of `undefined`. This is a common JS idiom for default values.
+
+[⬆ Back to Top](#table)
+
 
 ---
 ---
@@ -1712,6 +1721,9 @@ function countAvailableDrivers() {
 - **Strict equality (`===`)**: compares value *and* type, avoiding JS's type-coercion pitfalls (best practice vs. `==`).
 - **Array indexing** (`drivers[i]`) and **dot notation property access** (`.status`).
 - This function demonstrates manual iteration/counting, as opposed to using `Array.prototype.filter().length` — likely intentional for teaching loop fundamentals.
+
+[⬆ Back to Top](#table)
+
 
 ---
 ---
@@ -2216,6 +2228,7 @@ const count = drivers.filter(driver => driver.status === "available").length;
 پاسخ:
 
 > چون `===` علاوه بر مقدار، نوع داده را نیز مقایسه می‌کند و از تبدیل خودکار نوع داده (Type Coercion) جلوگیری می‌کند؛ بنابراین نسبت به `==` دقیق‌تر و ایمن‌تر است و در برنامه‌های حرفه‌ای استفاده از آن توصیه می‌شود.
+
 
 [⬆ Back to Top](#table)
 
@@ -3445,6 +3458,8 @@ peakHourEnd
 > برای جلوگیری از استفاده از **Magic Number** و افزایش خوانایی و قابلیت نگهداری کد. با این روش، در صورت تغییر ساعات شلوغی، فقط مقدار ثابت‌ها تغییر می‌کند و نیازی به تغییر منطق تابع نیست.
 
 [⬆ Back to Top](#table)
+
+
 ---
 ---
 ---
@@ -3921,7 +3936,9 @@ getFullYear()
 
 > زیرا ممکن است این عنصر در برخی صفحات وجود نداشته باشد. با استفاده از **Guard Clause** و `return` زودهنگام، از ایجاد خطای `Cannot read properties of null` جلوگیری می‌شود و تابع فقط در صورت وجود عنصر ادامه‌ی اجرا پیدا می‌کند.
 
+
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -4446,6 +4463,7 @@ href
 > زیرا ممکن است شماره تماس در چندین قسمت مختلف سایت نمایش داده شود. `getElementById()` فقط یک عنصر را پیدا می‌کند، اما `querySelectorAll()` تمام عناصر دارای ویژگی `data-support-phone` را انتخاب کرده و امکان به‌روزرسانی هم‌زمان همه‌ی آن‌ها را فراهم می‌کند.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -4795,6 +4813,7 @@ setPickupEstimate();
 > عملگر `+` در اینجا برای **اتصال رشته‌ها (String Concatenation)** استفاده شده است. از آنجا که یکی از عملوندها رشته (`" min"`) است، JavaScript عدد `AVG_PICKUP_MINUTES` را به‌صورت خودکار به رشته تبدیل کرده و در نهایت عبارتی مانند `"4 min"` تولید می‌کند. این رفتار نمونه‌ای از **Implicit Type Coercion** در JavaScript است.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -5316,6 +5335,7 @@ getTrafficMessage()
 > برای جلوگیری از تکرار کد (**Code Reuse**) و رعایت اصل **Separation of Concerns**. هر تابع فقط یک مسئولیت مشخص دارد؛ توابع دیگر داده را تولید می‌کنند و `updateHomeMetrics()` فقط مسئول نمایش آن داده‌ها در رابط کاربری (DOM) است.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -5979,6 +5999,7 @@ DOM
 > برای جلوگیری از تکرار کارت‌ها. اگر محتوای قبلی پاک نشود، با هر بار اجرای تابع، کارت‌های جدید به کارت‌های قبلی اضافه می‌شوند و اطلاعات چندین بار در صفحه نمایش داده خواهد شد. این دستور باعث می‌شود هر بار صفحه از ابتدا و بر اساس داده‌های فعلی دوباره رندر (Render) شود.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -6539,6 +6560,7 @@ renderDriverCards("busy");
 > زیرا در توابع معمولی، مقدار `this` به عنصری اشاره می‌کند که رویداد روی آن رخ داده است (دکمه‌ی کلیک‌شده). اما Arrow Function مقدار `this` مخصوص خود را ندارد و از محیط اطراف به ارث می‌برد؛ بنابراین در این کد استفاده از تابع معمولی برای دسترسی صحیح به `this` ضروری است. 
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -7244,6 +7266,8 @@ function setupContactForm() {
 - **`form.reset()`**: built-in `HTMLFormElement` method that clears all form fields after a successful "submission."
 - **`classList.remove("d-none")`**: reveals the feedback box (previously hidden via Bootstrap's `d-none` utility class) once there's a message to show.
 
+[⬆ Back to Top](#table)
+
 ---
 ---
 ---
@@ -7940,9 +7964,11 @@ d-none
 > این متد از رفتار پیش‌فرض مرورگر هنگام ارسال فرم جلوگیری می‌کند. در نتیجه صفحه دوباره بارگذاری نمی‌شود و اعتبارسنجی فرم و نمایش پیام‌های خطا یا موفقیت به صورت پویا و بدون Reload شدن صفحه انجام می‌شود.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
+
 <a id="page-17"></a>
 ### 3.14 `initTaxiCanvas()` — Canvas animation
 
@@ -8646,9 +8672,11 @@ canvasTaxiCount
 > `Math.random()` برای تولید موقعیت تصادفی هر تاکسی روی Canvas استفاده شده است تا نقاط در مکان‌های مختلف ظاهر شوند. عملگر `%` نیز برای تشخیص زوج یا فرد بودن شماره هر تاکسی به کار رفته تا با استفاده از عملگر سه‌تایی (`?:`) جهت حرکت آن مشخص شود؛ تاکسی‌های با اندیس زوج به سمت راست و تاکسی‌های با اندیس فرد به سمت چپ حرکت می‌کنند.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
+
 <a id="page-18"></a>
 ### 3.15 `initTimelineCanvas()`
 
@@ -9367,9 +9395,11 @@ requestAnimationFrame()
 > زیرا `requestAnimationFrame()` بهترین روش برای ایجاد انیمیشن در مرورگر است. این تابع اجرای فریم‌ها را با نرخ تازه‌سازی نمایشگر هماهنگ می‌کند، مصرف منابع سیستم را کاهش می‌دهد و نسبت به روش‌هایی مانند `setInterval()` انیمیشن روان‌تر و بهینه‌تری ایجاد می‌کند.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
+
 <a id="page-19"></a>
 ### 3.16 `initPage()` — the entry point / router
 
@@ -9907,9 +9937,11 @@ Router بسیار پیشرفته است.
 > زیرا این تابع بر اساس مقدار بازگشتی `getCurrentPage()` تشخیص می‌دهد که کاربر در کدام صفحه قرار دارد و فقط توابع مربوط به همان صفحه را اجرا می‌کند. به این ترتیب از اجرای غیرضروری کدها جلوگیری شده و ساختار پروژه به صورت ماژولار و سازمان‌یافته باقی می‌ماند.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
+
 <a id="page-20"></a>
 ### 3.17 Bootstrapping and cleanup
 
@@ -10491,9 +10523,11 @@ DOMContentLoaded
 > `})();` پایان و اجرای یک تابع خوداجرا (Immediately Invoked Function Expression یا IIFE) است. این الگو باعث می‌شود تمام متغیرها و توابع داخل فایل در یک محدوده (Scope) خصوصی قرار گیرند و وارد فضای سراسری (Global Scope) نشوند، در نتیجه از تداخل نام‌ها و آلودگی فضای سراسری جلوگیری می‌شود.
 
 [⬆ Back to Top](#table)
+
 ---
 ---
 ---
+
 <a id="page-21"></a>
 ## 4. Summary of JavaScript features demonstrated
 
