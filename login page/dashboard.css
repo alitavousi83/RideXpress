@@ -1,0 +1,32 @@
+/* RideXpress — placeholder page styles (dashboards, register, forgot password) */
+
+.dash-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+}
+
+.dash-card {
+  width: 100%;
+  max-width: 520px;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.dash-title {
+  margin: 0 0 var(--space-3);
+  font-size: 1.5rem;
+}
+
+.dash-greeting {
+  margin: 0 0 var(--space-2);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.dash-note {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-muted);
+}
